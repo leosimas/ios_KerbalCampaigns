@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LHL-mo-DSB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kerbal Campaigns-->
+        <scene sceneID="DAM-ng-IEg">
+            <objects>
+                <viewController id="7QJ-Nd-LOm" customClass="MainViewController" customModule="Kerbal_Campaigns" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mfe-tX-yDz"/>
+                        <viewControllerLayoutGuide type="bottom" id="H44-RP-FPl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GOn-XE-sZ4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jkw-PL-uWd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CampaignCell" id="I9A-D7-7cR" customClass="CampaignCell" customModule="Kerbal_Campaigns" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I9A-D7-7cR" id="kPW-Pi-jR1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4x-XX-yC6" userLabel="title">
+                                                    <rect key="frame" x="24" y="24" width="327" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNY-hl-f9C" userLabel="time">
+                                                    <rect key="frame" x="309" y="56" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZQ-tB-e1W" userLabel="level">
+                                                    <rect key="frame" x="24" y="56" width="44.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="e4x-XX-yC6" secondAttribute="trailing" constant="16" id="448-rN-Fso"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wNY-hl-f9C" secondAttribute="trailing" constant="16" id="AKK-8J-rf2"/>
+                                                <constraint firstItem="wNY-hl-f9C" firstAttribute="top" secondItem="e4x-XX-yC6" secondAttribute="bottom" constant="8" id="Buu-Dy-Lw3"/>
+                                                <constraint firstItem="EZQ-tB-e1W" firstAttribute="leading" secondItem="kPW-Pi-jR1" secondAttribute="leadingMargin" constant="16" id="P5S-ba-Mfa"/>
+                                                <constraint firstItem="e4x-XX-yC6" firstAttribute="leading" secondItem="kPW-Pi-jR1" secondAttribute="leadingMargin" constant="16" id="ZFh-jK-bQn"/>
+                                                <constraint firstItem="EZQ-tB-e1W" firstAttribute="top" secondItem="e4x-XX-yC6" secondAttribute="bottom" constant="8" id="fQH-8o-3Pd"/>
+                                                <constraint firstItem="e4x-XX-yC6" firstAttribute="top" secondItem="kPW-Pi-jR1" secondAttribute="topMargin" constant="16" id="yJR-vF-Q7O"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H44-RP-FPl" firstAttribute="top" secondItem="jkw-PL-uWd" secondAttribute="bottom" id="Qfq-76-EIC"/>
+                            <constraint firstItem="jkw-PL-uWd" firstAttribute="top" secondItem="mfe-tX-yDz" secondAttribute="bottom" id="cbM-BU-eXs"/>
+                            <constraint firstItem="jkw-PL-uWd" firstAttribute="width" secondItem="GOn-XE-sZ4" secondAttribute="width" id="frH-vp-yeZ"/>
+                            <constraint firstItem="jkw-PL-uWd" firstAttribute="centerX" secondItem="GOn-XE-sZ4" secondAttribute="centerX" id="nk5-n6-C12"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kerbal Campaigns" id="9JN-Qg-Srn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3YN-0C-xbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="103"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P8L-IC-2LM">
+            <objects>
+                <navigationController id="LHL-mo-DSB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sGW-Rd-O4K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7QJ-Nd-LOm" kind="relationship" relationship="rootViewController" id="VG6-wH-Hgv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSE-9B-5AZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-432" y="103"/>
+        </scene>
+    </scenes>
+</document>

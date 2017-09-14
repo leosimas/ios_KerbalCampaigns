@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50159A491F6A10E3004D2AFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50159A481F6A10E3004D2AFE /* AppDelegate.swift */; };
+		50159A4B1F6A10E3004D2AFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50159A4A1F6A10E3004D2AFE /* ViewController.swift */; };
+		50159A4E1F6A10E3004D2AFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50159A4C1F6A10E3004D2AFE /* Main.storyboard */; };
+		50159A501F6A10E3004D2AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50159A4F1F6A10E3004D2AFE /* Assets.xcassets */; };
+		50159A531F6A10E3004D2AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50159A511F6A10E3004D2AFE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		50159A451F6A10E3004D2AFE /* Kerbal Campaigns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kerbal Campaigns.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50159A481F6A10E3004D2AFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50159A4A1F6A10E3004D2AFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50159A4D1F6A10E3004D2AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50159A4F1F6A10E3004D2AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50159A521F6A10E3004D2AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		50159A541F6A10E3004D2AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50159A421F6A10E3004D2AFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50159A3C1F6A10E3004D2AFE = {
+			isa = PBXGroup;
+			children = (
+				50159A471F6A10E3004D2AFE /* Kerbal Campaigns */,
+				50159A461F6A10E3004D2AFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50159A461F6A10E3004D2AFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50159A451F6A10E3004D2AFE /* Kerbal Campaigns.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50159A471F6A10E3004D2AFE /* Kerbal Campaigns */ = {
+			isa = PBXGroup;
+			children = (
+				50159A481F6A10E3004D2AFE /* AppDelegate.swift */,
+				50159A4A1F6A10E3004D2AFE /* ViewController.swift */,
+				50159A4C1F6A10E3004D2AFE /* Main.storyboard */,
+				50159A4F1F6A10E3004D2AFE /* Assets.xcassets */,
+				50159A511F6A10E3004D2AFE /* LaunchScreen.storyboard */,
+				50159A541F6A10E3004D2AFE /* Info.plist */,
+			);
+			path = "Kerbal Campaigns";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50159A441F6A10E3004D2AFE /* Kerbal Campaigns */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50159A571F6A10E3004D2AFE /* Build configuration list for PBXNativeTarget "Kerbal Campaigns" */;
+			buildPhases = (
+				50159A411F6A10E3004D2AFE /* Sources */,
+				50159A421F6A10E3004D2AFE /* Frameworks */,
+				50159A431F6A10E3004D2AFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kerbal Campaigns";
+			productName = "Kerbal Campaigns";
+			productReference = 50159A451F6A10E3004D2AFE /* Kerbal Campaigns.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50159A3D1F6A10E3004D2AFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Simas Team";
+				TargetAttributes = {
+					50159A441F6A10E3004D2AFE = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 50159A401F6A10E3004D2AFE /* Build configuration list for PBXProject "Kerbal Campaigns" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50159A3C1F6A10E3004D2AFE;
+			productRefGroup = 50159A461F6A10E3004D2AFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50159A441F6A10E3004D2AFE /* Kerbal Campaigns */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50159A431F6A10E3004D2AFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50159A531F6A10E3004D2AFE /* LaunchScreen.storyboard in Resources */,
+				50159A501F6A10E3004D2AFE /* Assets.xcassets in Resources */,
+				50159A4E1F6A10E3004D2AFE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50159A411F6A10E3004D2AFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50159A4B1F6A10E3004D2AFE /* ViewController.swift in Sources */,
+				50159A491F6A10E3004D2AFE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		50159A4C1F6A10E3004D2AFE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50159A4D1F6A10E3004D2AFE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		50159A511F6A10E3004D2AFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50159A521F6A10E3004D2AFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50159A551F6A10E3004D2AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		50159A561F6A10E3004D2AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50159A581F6A10E3004D2AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Kerbal Campaigns/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simasteam.Kerbal-Campaigns";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		50159A591F6A10E3004D2AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Kerbal Campaigns/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simasteam.Kerbal-Campaigns";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50159A401F6A10E3004D2AFE /* Build configuration list for PBXProject "Kerbal Campaigns" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50159A551F6A10E3004D2AFE /* Debug */,
+				50159A561F6A10E3004D2AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50159A571F6A10E3004D2AFE /* Build configuration list for PBXNativeTarget "Kerbal Campaigns" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50159A581F6A10E3004D2AFE /* Debug */,
+				50159A591F6A10E3004D2AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50159A3D1F6A10E3004D2AFE /* Project object */;
+}
