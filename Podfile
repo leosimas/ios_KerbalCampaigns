@@ -7,7 +7,7 @@ target 'Kerbal Campaigns' do
 
   # Pods for Kerbal Campaigns
   
-  
+  pod 'RealmSwift', '~> 2.10.0'
   
   # firebase pods:
   pod 'FirebaseCore', '~> 4.0.6'

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		26F2ED9884ED6473DD3139FC /* Pods_Kerbal_Campaigns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68D47B4F23220C818CCDC53 /* Pods_Kerbal_Campaigns.framework */; };
+		500DC3521F6C7E6D00D85C36 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3511F6C7E6D00D85C36 /* Campaign.swift */; };
+		500DC3541F6C823300D85C36 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3531F6C823300D85C36 /* Mission.swift */; };
+		500DC3561F6C97BB00D85C36 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3551F6C97BB00D85C36 /* Task.swift */; };
+		500DC3581F6C9B9100D85C36 /* KerbalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3571F6C9B9100D85C36 /* KerbalManager.swift */; };
 		50159A491F6A10E3004D2AFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50159A481F6A10E3004D2AFE /* AppDelegate.swift */; };
 		50159A4E1F6A10E3004D2AFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50159A4C1F6A10E3004D2AFE /* Main.storyboard */; };
 		50159A501F6A10E3004D2AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50159A4F1F6A10E3004D2AFE /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 
 /* Begin PBXFileReference section */
 		4B36AD62655BC360AD83699A /* Pods-Kerbal Campaigns.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerbal Campaigns.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kerbal Campaigns/Pods-Kerbal Campaigns.release.xcconfig"; sourceTree = "<group>"; };
+		500DC3511F6C7E6D00D85C36 /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Campaign.swift; path = Models/Bean/Campaign.swift; sourceTree = "<group>"; };
+		500DC3531F6C823300D85C36 /* Mission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mission.swift; path = Models/Bean/Mission.swift; sourceTree = "<group>"; };
+		500DC3551F6C97BB00D85C36 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Models/Bean/Task.swift; sourceTree = "<group>"; };
+		500DC3571F6C9B9100D85C36 /* KerbalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KerbalManager.swift; path = Models/KerbalManager.swift; sourceTree = "<group>"; };
 		50159A451F6A10E3004D2AFE /* Kerbal Campaigns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kerbal Campaigns.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50159A481F6A10E3004D2AFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50159A4D1F6A10E3004D2AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,6 +58,16 @@
 				B68D47B4F23220C818CCDC53 /* Pods_Kerbal_Campaigns.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		500DC3501F6C7E5A00D85C36 /* Bean */ = {
+			isa = PBXGroup;
+			children = (
+				500DC3511F6C7E6D00D85C36 /* Campaign.swift */,
+				500DC3531F6C823300D85C36 /* Mission.swift */,
+				500DC3551F6C97BB00D85C36 /* Task.swift */,
+			);
+			name = Bean;
 			sourceTree = "<group>";
 		};
 		50159A3C1F6A10E3004D2AFE = {
@@ -105,6 +123,8 @@
 		50159A5E1F6A972D004D2AFE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				500DC3501F6C7E5A00D85C36 /* Bean */,
+				500DC3571F6C9B9100D85C36 /* KerbalManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -224,12 +244,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kerbal Campaigns/Pods-Kerbal Campaigns-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -261,8 +285,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				50159A491F6A10E3004D2AFE /* AppDelegate.swift in Sources */,
+				500DC3521F6C7E6D00D85C36 /* Campaign.swift in Sources */,
 				50159A611F6A9781004D2AFE /* MainViewController.swift in Sources */,
+				500DC3541F6C823300D85C36 /* Mission.swift in Sources */,
+				500DC3561F6C97BB00D85C36 /* Task.swift in Sources */,
 				50159A631F6AA20C004D2AFE /* CampaignCell.swift in Sources */,
+				500DC3581F6C9B9100D85C36 /* KerbalManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
