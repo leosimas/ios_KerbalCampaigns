@@ -12,6 +12,8 @@ class Task : Object {
     
     dynamic var id = ""
     dynamic var completed : Bool = false
+    dynamic var name = ""
+    let subTasks = List<SubTask>()
     let mission = LinkingObjects(fromType: Mission.self, property: "tasks")
     
     override static func primaryKey() -> String? {

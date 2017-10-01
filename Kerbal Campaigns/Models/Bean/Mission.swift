@@ -12,11 +12,12 @@ class Mission : Object {
     
     dynamic var id = ""
     dynamic var completed : Bool = false
+    dynamic var name = ""
     let tasks = List<Task>()
     let campaign = LinkingObjects(fromType: Campaign.self, property: "missions")
     
     override static func primaryKey() -> String? {
         return "id"
     }
-    
+
 }

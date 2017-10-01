@@ -13,7 +13,15 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        KerbalManager.shared.loadCampaigns { (errorMessage, campaigns) in
+            guard let list = campaigns else {
+                print(errorMessage ?? "error")
+                return
+            }
+            
+            print("campaigns count = \(list.count)")
+        }
+        
     }
 
 }

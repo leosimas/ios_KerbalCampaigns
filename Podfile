@@ -6,7 +6,7 @@ target 'Kerbal Campaigns' do
   use_frameworks!
 
   # Pods for Kerbal Campaigns
-  
+  pod 'SwiftyUserDefaults', '~> 3.0'
   pod 'RealmSwift', '~> 2.10.0'
   
   # firebase pods:

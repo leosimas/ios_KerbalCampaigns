@@ -19,6 +19,9 @@
 		50159A5B1F6A9615004D2AFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50159A5A1F6A9615004D2AFE /* GoogleService-Info.plist */; };
 		50159A611F6A9781004D2AFE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50159A601F6A9781004D2AFE /* MainViewController.swift */; };
 		50159A631F6AA20C004D2AFE /* CampaignCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50159A621F6AA20C004D2AFE /* CampaignCell.swift */; };
+		A32143AE1F8115FA00E4B40E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143AD1F8115FA00E4B40E /* Constants.swift */; };
+		A32143B01F81384D00E4B40E /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143AF1F81384D00E4B40E /* UserDefaults.swift */; };
+		A32143B21F81411A00E4B40E /* SubTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143B11F81411A00E4B40E /* SubTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		50159A601F6A9781004D2AFE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controllers/MainViewController.swift; sourceTree = "<group>"; };
 		50159A621F6AA20C004D2AFE /* CampaignCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignCell.swift; path = Views/CampaignCell.swift; sourceTree = "<group>"; };
 		885F942720452827A5AD4452 /* Pods-Kerbal Campaigns.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerbal Campaigns.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kerbal Campaigns/Pods-Kerbal Campaigns.debug.xcconfig"; sourceTree = "<group>"; };
+		A32143AD1F8115FA00E4B40E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Models/Constants.swift; sourceTree = "<group>"; };
+		A32143AF1F81384D00E4B40E /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = Models/UserDefaults.swift; sourceTree = "<group>"; };
+		A32143B11F81411A00E4B40E /* SubTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubTask.swift; path = Models/Bean/SubTask.swift; sourceTree = "<group>"; };
 		B68D47B4F23220C818CCDC53 /* Pods_Kerbal_Campaigns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerbal_Campaigns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,6 +72,7 @@
 				500DC3511F6C7E6D00D85C36 /* Campaign.swift */,
 				500DC3531F6C823300D85C36 /* Mission.swift */,
 				500DC3551F6C97BB00D85C36 /* Task.swift */,
+				A32143B11F81411A00E4B40E /* SubTask.swift */,
 			);
 			name = Bean;
 			sourceTree = "<group>";
@@ -124,7 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				500DC3501F6C7E5A00D85C36 /* Bean */,
+				A32143AD1F8115FA00E4B40E /* Constants.swift */,
 				500DC3571F6C9B9100D85C36 /* KerbalManager.swift */,
+				A32143AF1F81384D00E4B40E /* UserDefaults.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -246,6 +255,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -254,6 +264,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -287,10 +298,13 @@
 				50159A491F6A10E3004D2AFE /* AppDelegate.swift in Sources */,
 				500DC3521F6C7E6D00D85C36 /* Campaign.swift in Sources */,
 				50159A611F6A9781004D2AFE /* MainViewController.swift in Sources */,
+				A32143B21F81411A00E4B40E /* SubTask.swift in Sources */,
 				500DC3541F6C823300D85C36 /* Mission.swift in Sources */,
 				500DC3561F6C97BB00D85C36 /* Task.swift in Sources */,
+				A32143B01F81384D00E4B40E /* UserDefaults.swift in Sources */,
 				50159A631F6AA20C004D2AFE /* CampaignCell.swift in Sources */,
 				500DC3581F6C9B9100D85C36 /* KerbalManager.swift in Sources */,
+				A32143AE1F8115FA00E4B40E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
