@@ -17,6 +17,8 @@ class KerbalManager {
     private let realm : Realm!
     private var databaseRef : DatabaseReference!
     
+    private static let TIMEOUT = 30
+    
     private init() {
         realm = try! Realm()
         databaseRef = Database.database().reference()
@@ -28,7 +30,12 @@ class KerbalManager {
     }
     
     func loadCampaigns(completion : @escaping ((String?, [Campaign]?)-> Void)) {
-        databaseRef.child("lastUpdate").observeSingleEvent(of: .value, with: { (snapshot) in
+        var cancelUpdate = true
+        
+        let reference = databaseRef.child("lastUpdate")
+        reference.observeSingleEvent(of: .value, with: { (snapshot) in
+            cancelUpdate = false
+            
             let serverUpdate = snapshot.value as! Int
             
             let lastUpdate = Defaults[.lastUpdate]
@@ -38,10 +45,32 @@ class KerbalManager {
                 completion(nil, self.loadCampaigns())
             }
         })
+        
+        let deadlineTime = DispatchTime.now() + .seconds(KerbalManager.TIMEOUT)
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            if cancelUpdate {
+                reference.removeAllObservers()
+                self.cancelRequest(completion: completion)
+            }
+        }
+    }
+    
+    private func cancelRequest(completion : ((String?, [Campaign]?)-> Void)) {
+        let campaigns = self.loadCampaigns()
+        if campaigns.count == 0 {
+            completion("Unable to load the campaigns. Try again later.", nil)
+        } else {
+            completion(nil, campaigns)
+        }
     }
     
     func syncCampaigns(lastUpdate : Int, completion : @escaping ((String?, [Campaign]?)-> Void)) {
-        databaseRef.child("campaigns").observeSingleEvent(of: .value, with: { (snapshot) in
+        var cancelUpdate = true
+        
+        let reference = databaseRef.child("campaigns")
+        reference.observeSingleEvent(of: .value, with: { (snapshot) in
+            cancelUpdate = false
+            
             var campaignsList : [Campaign] = []
             
             let campaignsArray = snapshot.value as! NSArray
@@ -57,6 +86,14 @@ class KerbalManager {
             completion(nil, campaignsList)
             
         })
+        
+        let deadlineTime = DispatchTime.now() + .seconds(KerbalManager.TIMEOUT)
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            if cancelUpdate {
+                reference.removeAllObservers()
+                self.cancelRequest(completion: completion)
+            }
+        }
     }
     
     private func createCampaign(_ jsonCampaign : NSDictionary) -> Campaign {
