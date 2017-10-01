@@ -10,18 +10,49 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    fileprivate var campaigns : [Campaign] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LoadingView.show(inView: view)
 
         KerbalManager.shared.loadCampaigns { (errorMessage, campaigns) in
+            LoadingView.hide()
+            
             guard let list = campaigns else {
-                print(errorMessage ?? "error")
+                Dialogs.alert(controller: self, title: "Error", message: errorMessage!)
                 return
             }
             
-            print("campaigns count = \(list.count)")
+            self.campaigns = list
+            self.tableView.reloadData()
         }
-        
     }
 
+}
+
+extension MainViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return campaigns.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CampaignCell") as! CampaignCell
+        let campaign = campaigns[indexPath.row]
+        cell.setup(campaign: campaign)
+        return cell
+    }
+    
+}
+
+extension MainViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
 }
