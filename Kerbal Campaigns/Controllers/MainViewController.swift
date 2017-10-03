@@ -31,6 +31,12 @@ class MainViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
+    fileprivate func show( campaign : Campaign ) {
+        let campaignVC = storyboard?.instantiateViewController(withIdentifier: "CampaignViewController") as! CampaignViewController
+        campaignVC.campaign = campaign
+        navigationController?.pushViewController(campaignVC, animated: true)
+    }
 
 }
 
@@ -52,7 +58,9 @@ extension MainViewController : UITableViewDataSource {
 extension MainViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let campaign = campaigns[indexPath.row]
+        show(campaign: campaign)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
 }
