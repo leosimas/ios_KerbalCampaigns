@@ -170,4 +170,38 @@ class KerbalManager {
         return subTasks
     }
     
+    func mark(task : Task, completed : Bool) {
+        try! realm.write {
+            task.completed = completed
+            
+            var missionCompleted = true
+            
+            let mission = task.mission.first!
+            for t in mission.tasks {
+                if !t.completed {
+                    missionCompleted = false
+                    break
+                }
+            }
+            
+            if missionCompleted {
+                mission.completed = true
+            }
+            
+            var campaignCompleted = true
+            
+            let campaign = mission.campaign.first!
+            for m in campaign.missions {
+                if !m.completed {
+                    campaignCompleted = false
+                    break
+                }
+            }
+            
+            if campaignCompleted {
+                campaign.completed = true
+            }
+        }
+    }
+    
 }

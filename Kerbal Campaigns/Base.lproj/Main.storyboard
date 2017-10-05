@@ -178,7 +178,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbS-Fi-oLq">
-                                <rect key="frame" x="-0.5" y="20" width="375" height="77.5"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="77.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpb-vm-fQw">
                                         <rect key="frame" x="16" y="16" width="343" height="20.5"/>
@@ -205,7 +205,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvw-o5-gzE">
-                                <rect key="frame" x="-0.5" y="97.5" width="375" height="569.5"/>
+                                <rect key="frame" x="0.0" y="97.5" width="375" height="569.5"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -222,6 +222,7 @@
                     <connections>
                         <outlet property="labelObjectives" destination="ZOb-ds-UfO" id="tsv-La-iC1"/>
                         <outlet property="labelTitle" destination="jpb-vm-fQw" id="zUe-I7-wSz"/>
+                        <outlet property="scrollView" destination="Mvw-o5-gzE" id="cW5-Cz-Wjg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZO6-gQ-Mcz" userLabel="First Responder" sceneMemberID="firstResponder"/>

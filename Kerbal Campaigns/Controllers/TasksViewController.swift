@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SnapKitten
+import BEMCheckBox
 
 class TasksViewController: UIViewController {
     
@@ -14,12 +16,31 @@ class TasksViewController: UIViewController {
     
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelObjectives: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         labelTitle.text = mission.name
         updateCompletedObjectives()
+        buildTasks()
+    }
+    
+    private func buildTasks() {
+        let methods = Kitten.vertical().from(scrollView)
+        
+        for task in mission.tasks {
+            let checkboxView = CheckboxView()
+            checkboxView.bind(on: task.completed, text: task.name, handler: { (on) in
+                KerbalManager.shared.mark(task : task, completed : on)
+                self.updateCompletedObjectives()
+            })
+            
+            methods.add(checkboxView)
+                .sidePadding(16)
+        }
+        
+        methods.build()
     }
     
     private func updateCompletedObjectives() {

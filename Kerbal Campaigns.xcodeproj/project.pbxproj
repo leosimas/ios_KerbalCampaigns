@@ -27,6 +27,8 @@
 		A32143BA1F81A06500E4B40E /* CampaignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143B91F81A06500E4B40E /* CampaignViewController.swift */; };
 		A32143BC1F830CFC00E4B40E /* MissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143BB1F830CFC00E4B40E /* MissionsViewController.swift */; };
 		A32143BE1F8314EB00E4B40E /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143BD1F8314EB00E4B40E /* TasksViewController.swift */; };
+		A32143C01F85AEE400E4B40E /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143BF1F85AEE400E4B40E /* CheckboxView.swift */; };
+		A32143C21F85BC0000E4B40E /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143C11F85BC0000E4B40E /* Dimensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		A32143B91F81A06500E4B40E /* CampaignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignViewController.swift; path = Controllers/CampaignViewController.swift; sourceTree = "<group>"; };
 		A32143BB1F830CFC00E4B40E /* MissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MissionsViewController.swift; path = Controllers/MissionsViewController.swift; sourceTree = "<group>"; };
 		A32143BD1F8314EB00E4B40E /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksViewController.swift; path = Controllers/TasksViewController.swift; sourceTree = "<group>"; };
+		A32143BF1F85AEE400E4B40E /* CheckboxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckboxView.swift; path = Views/CheckboxView.swift; sourceTree = "<group>"; };
+		A32143C11F85BC0000E4B40E /* Dimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
 		B68D47B4F23220C818CCDC53 /* Pods_Kerbal_Campaigns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerbal_Campaigns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,6 +129,7 @@
 				50159A4C1F6A10E3004D2AFE /* Main.storyboard */,
 				50159A4F1F6A10E3004D2AFE /* Assets.xcassets */,
 				50159A511F6A10E3004D2AFE /* LaunchScreen.storyboard */,
+				A32143C11F85BC0000E4B40E /* Dimensions.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				A32143B51F819C8E00E4B40E /* Dialogs.swift */,
 				A32143B61F819C8E00E4B40E /* LoadingView.swift */,
 				50159A621F6AA20C004D2AFE /* CampaignCell.swift */,
+				A32143BF1F85AEE400E4B40E /* CheckboxView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -267,18 +273,24 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kerbal Campaigns/Pods-Kerbal Campaigns-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKitten/SnapKitten.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKitten.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -313,6 +325,7 @@
 				A32143B71F819C8E00E4B40E /* Dialogs.swift in Sources */,
 				50159A491F6A10E3004D2AFE /* AppDelegate.swift in Sources */,
 				A32143BE1F8314EB00E4B40E /* TasksViewController.swift in Sources */,
+				A32143C21F85BC0000E4B40E /* Dimensions.swift in Sources */,
 				500DC3521F6C7E6D00D85C36 /* Campaign.swift in Sources */,
 				50159A611F6A9781004D2AFE /* MainViewController.swift in Sources */,
 				A32143B21F81411A00E4B40E /* SubTask.swift in Sources */,
@@ -325,6 +338,7 @@
 				A32143BC1F830CFC00E4B40E /* MissionsViewController.swift in Sources */,
 				A32143AE1F8115FA00E4B40E /* Constants.swift in Sources */,
 				A32143BA1F81A06500E4B40E /* CampaignViewController.swift in Sources */,
+				A32143C01F85AEE400E4B40E /* CheckboxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

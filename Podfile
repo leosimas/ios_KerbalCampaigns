@@ -8,6 +8,8 @@ target 'Kerbal Campaigns' do
   # Pods for Kerbal Campaigns
   pod 'SwiftyUserDefaults', '~> 3.0'
   pod 'RealmSwift', '~> 2.10.0'
+  pod 'SnapKitten', '~> 1.2.0' # linearlayout like
+  pod 'BEMCheckBox', '~> 1.4.0'
   
   # firebase pods:
   pod 'FirebaseCore', '~> 4.0.6'
