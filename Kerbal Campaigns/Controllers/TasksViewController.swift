@@ -21,6 +21,8 @@ class TasksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarItem.image = nil
+        
         labelTitle.text = mission.name
         updateCompletedObjectives()
         buildTasks()
@@ -29,7 +31,13 @@ class TasksViewController: UIViewController {
     private func buildTasks() {
         let methods = Kitten.vertical().from(scrollView)
         
-        for task in mission.tasks {
+        let padding = 16
+        let paddingVertical = padding / 2
+        let paddingStart = padding * 3
+        
+        
+        
+        for (index, task) in mission.tasks.enumerated() {
             let checkboxView = CheckboxView()
             checkboxView.bind(on: task.completed, text: task.name, handler: { (on) in
                 KerbalManager.shared.mark(task : task, completed : on)
@@ -37,7 +45,46 @@ class TasksViewController: UIViewController {
             })
             
             methods.add(checkboxView)
-                .sidePadding(16)
+                .sidePadding(padding)
+            
+            for subtask in task.subTasks {
+                let label = UILabel()
+                label.text = subtask.name
+                label.numberOfLines = 0
+                label.font = UIFont.systemFont(ofSize: Dimensions.fontSmall)
+                
+                let view = UIView()
+                view.addSubview(label)
+                label.snp.makeConstraints({ (make) in
+                    make.top.equalToSuperview().offset(paddingVertical)
+                    make.bottom.equalToSuperview().inset(paddingVertical)
+                    make.width.equalToSuperview()
+                    make.centerX.equalToSuperview()
+                })
+                
+                methods.add(view)
+                    .sideStartPadding(paddingStart)
+                    .sideEndPadding(padding)
+            }
+            
+            if index < (mission.tasks.count - 1) {
+                let dividerArea = UIView()
+                
+                let divider = UIView()
+                dividerArea.addSubview(divider)
+                divider.snp.makeConstraints({ (make) in
+                    make.height.equalTo(1)
+                    make.top.equalToSuperview().offset(8)
+                    make.bottom.equalToSuperview().inset(16)
+                    make.width.equalTo(200)
+                    make.centerX.equalToSuperview()
+                })
+                divider.backgroundColor = UIColor.lightGray
+                
+                methods.add(dividerArea)
+                    .sidePadding(paddingStart)
+            }
+            
         }
         
         methods.build()

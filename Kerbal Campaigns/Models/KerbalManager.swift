@@ -184,9 +184,7 @@ class KerbalManager {
                 }
             }
             
-            if missionCompleted {
-                mission.completed = true
-            }
+            mission.completed = missionCompleted
             
             var campaignCompleted = true
             
@@ -198,9 +196,7 @@ class KerbalManager {
                 }
             }
             
-            if campaignCompleted {
-                campaign.completed = true
-            }
+            campaign.completed = campaignCompleted
         }
     }
     

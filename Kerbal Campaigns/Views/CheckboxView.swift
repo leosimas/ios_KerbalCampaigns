@@ -42,7 +42,7 @@ class CheckboxView : UIView {
         
         label = UILabel()
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: Dimensions.fontMedium)
+        label.font = UIFont.boldSystemFont(ofSize: Dimensions.fontMedium)
         addSubview(label)
         label.snp.makeConstraints { (make) in
             make.leading.equalTo(bemCheck.snp.trailing).offset(16)
@@ -68,7 +68,6 @@ class CheckboxView : UIView {
 extension CheckboxView : BEMCheckBoxDelegate {
     
     func didTap(_ checkBox: BEMCheckBox) {
-        print("didTap")
         changeHandler?(checkBox.on)
     }
     

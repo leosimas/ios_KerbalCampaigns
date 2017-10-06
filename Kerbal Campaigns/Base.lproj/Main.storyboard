@@ -107,21 +107,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9X-NA-zu4">
-                                <rect key="frame" x="0.0" y="20" width="375" height="48"/>
-                                <color key="backgroundColor" red="0.54705758760000001" green="1" blue="0.48205662100000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cef-4r-JWg">
+                                        <rect key="frame" x="16" y="13" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhX-Ha-w86">
+                                        <rect key="frame" x="323.5" y="16" width="35.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUN-XF-cpy">
+                                        <rect key="frame" x="16" y="42" width="35.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="8Yl-Hn-1Sn"/>
+                                    <constraint firstAttribute="trailing" secondItem="dhX-Ha-w86" secondAttribute="trailing" constant="16" id="6bf-uw-b6o"/>
+                                    <constraint firstItem="dhX-Ha-w86" firstAttribute="top" secondItem="W9X-NA-zu4" secondAttribute="top" constant="16" id="RRI-bu-2dt"/>
+                                    <constraint firstAttribute="bottom" secondItem="LUN-XF-cpy" secondAttribute="bottom" constant="16" id="d9D-mN-LBO"/>
+                                    <constraint firstItem="cef-4r-JWg" firstAttribute="baseline" secondItem="dhX-Ha-w86" secondAttribute="baseline" id="htq-on-Gar"/>
+                                    <constraint firstItem="LUN-XF-cpy" firstAttribute="top" secondItem="cef-4r-JWg" secondAttribute="bottom" constant="8" id="pv9-wu-hZ6"/>
+                                    <constraint firstItem="cef-4r-JWg" firstAttribute="leading" secondItem="W9X-NA-zu4" secondAttribute="leading" constant="16" id="rtf-be-J0c"/>
+                                    <constraint firstItem="LUN-XF-cpy" firstAttribute="leading" secondItem="cef-4r-JWg" secondAttribute="leading" id="tTB-TC-eVO"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xx-fl-rtI">
-                                <rect key="frame" x="32" y="84" width="311" height="30"/>
+                                <rect key="frame" x="32" y="111" width="311" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="onMissionsButtonTap:" destination="RdK-x9-DaO" eventType="touchUpInside" id="BUN-o2-sr1"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4c-uC-oaT">
-                                <rect key="frame" x="20" y="130" width="335" height="521"/>
+                                <rect key="frame" x="20" y="157" width="335" height="494"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -144,7 +170,10 @@
                     </view>
                     <connections>
                         <outlet property="buttonMissions" destination="8xx-fl-rtI" id="PIz-aD-KOm"/>
+                        <outlet property="textDifficulty" destination="cef-4r-JWg" id="0Ha-Qv-9fA"/>
                         <outlet property="textIntro" destination="M4c-uC-oaT" id="IOg-eD-knC"/>
+                        <outlet property="textProgress" destination="LUN-XF-cpy" id="vmh-O6-Z9p"/>
+                        <outlet property="textTime" destination="dhX-Ha-w86" id="l4t-VE-Lsp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EDJ-qd-RQz" userLabel="First Responder" sceneMemberID="firstResponder"/>

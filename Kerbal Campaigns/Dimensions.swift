@@ -10,5 +10,6 @@ import UIKit
 struct Dimensions {
     
     static let fontMedium : CGFloat = 14
+    static let fontSmall : CGFloat = 12
     
 }

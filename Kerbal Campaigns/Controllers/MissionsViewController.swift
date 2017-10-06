@@ -15,6 +15,8 @@ class MissionsViewController : UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationItem.backBarButtonItem?.title = "Back"
+        
         var tabs : [UIViewController] = []
         for (index, mission) in campaign.missions.enumerated() {
             let tasksVC = storyboard?.instantiateViewController(withIdentifier: "TasksViewController") as! TasksViewController
