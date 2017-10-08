@@ -21,8 +21,6 @@ class TasksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBarItem.image = nil
-        
         labelTitle.text = mission.name
         updateCompletedObjectives()
         buildTasks()

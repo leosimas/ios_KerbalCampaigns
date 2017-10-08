@@ -23,6 +23,9 @@ class MissionsViewController : UITabBarController {
             tasksVC.mission = mission
             tasksVC.title = "Mission \(index+1)"
             tabs.append( tasksVC )
+            
+            tasksVC.tabBarItem.image = nil
+            tasksVC.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -16)
         }
         
         viewControllers = tabs
