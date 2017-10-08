@@ -29,6 +29,8 @@
 		A32143BE1F8314EB00E4B40E /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143BD1F8314EB00E4B40E /* TasksViewController.swift */; };
 		A32143C01F85AEE400E4B40E /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143BF1F85AEE400E4B40E /* CheckboxView.swift */; };
 		A32143C21F85BC0000E4B40E /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143C11F85BC0000E4B40E /* Dimensions.swift */; };
+		A32143C41F8A669200E4B40E /* DifficultyBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143C31F8A669200E4B40E /* DifficultyBarView.swift */; };
+		A32143C81F8A6C9200E4B40E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32143C71F8A6C9200E4B40E /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		A32143BD1F8314EB00E4B40E /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksViewController.swift; path = Controllers/TasksViewController.swift; sourceTree = "<group>"; };
 		A32143BF1F85AEE400E4B40E /* CheckboxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckboxView.swift; path = Views/CheckboxView.swift; sourceTree = "<group>"; };
 		A32143C11F85BC0000E4B40E /* Dimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		A32143C31F8A669200E4B40E /* DifficultyBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DifficultyBarView.swift; path = Views/DifficultyBarView.swift; sourceTree = "<group>"; };
+		A32143C71F8A6C9200E4B40E /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B68D47B4F23220C818CCDC53 /* Pods_Kerbal_Campaigns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerbal_Campaigns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +133,7 @@
 				50159A4C1F6A10E3004D2AFE /* Main.storyboard */,
 				50159A4F1F6A10E3004D2AFE /* Assets.xcassets */,
 				50159A511F6A10E3004D2AFE /* LaunchScreen.storyboard */,
+				A32143C71F8A6C9200E4B40E /* Colors.swift */,
 				A32143C11F85BC0000E4B40E /* Dimensions.swift */,
 			);
 			name = Resources;
@@ -161,6 +166,7 @@
 			children = (
 				50159A621F6AA20C004D2AFE /* CampaignCell.swift */,
 				A32143BF1F85AEE400E4B40E /* CheckboxView.swift */,
+				A32143C31F8A669200E4B40E /* DifficultyBarView.swift */,
 				A32143B51F819C8E00E4B40E /* Dialogs.swift */,
 				A32143B61F819C8E00E4B40E /* LoadingView.swift */,
 			);
@@ -333,6 +339,8 @@
 				500DC3541F6C823300D85C36 /* Mission.swift in Sources */,
 				500DC3561F6C97BB00D85C36 /* Task.swift in Sources */,
 				A32143B01F81384D00E4B40E /* UserDefaults.swift in Sources */,
+				A32143C41F8A669200E4B40E /* DifficultyBarView.swift in Sources */,
+				A32143C81F8A6C9200E4B40E /* Colors.swift in Sources */,
 				50159A631F6AA20C004D2AFE /* CampaignCell.swift in Sources */,
 				500DC3581F6C9B9100D85C36 /* KerbalManager.swift in Sources */,
 				A32143BC1F830CFC00E4B40E /* MissionsViewController.swift in Sources */,

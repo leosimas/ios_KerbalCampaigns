@@ -17,6 +17,7 @@ class CampaignViewController : UIViewController {
     @IBOutlet weak var textDifficulty: UILabel!
     @IBOutlet weak var textProgress: UILabel!
     @IBOutlet weak var textTime: UILabel!
+    @IBOutlet weak var difficultyBarView: DifficultyBarView!
     
     private var viewInitialized = false
     
@@ -24,6 +25,7 @@ class CampaignViewController : UIViewController {
         textIntro.text = campaign.introduction
         textDifficulty.text = campaign.difficultyText
         textTime.text = campaign.length
+        difficultyBarView.set(difficulty: campaign.difficultyNumber)
     }
     
     override func viewWillAppear(_ animated: Bool) {
