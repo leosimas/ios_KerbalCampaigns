@@ -41,13 +41,9 @@ class LoadingView {
     static func show(inView view : UIView) {
         LoadingView.hide()
         
-        DispatchQueue.main.async {
-            let loadingView = LoadingView.getView()
-            loadingView.center = view.center
-            view.addSubview(loadingView)
-        }
-        
-        
+        let loadingView = LoadingView.getView()
+        loadingView.center = view.center
+        view.addSubview(loadingView)
     }
     
     static func hide() {

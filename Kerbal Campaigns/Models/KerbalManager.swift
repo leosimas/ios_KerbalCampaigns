@@ -9,6 +9,7 @@
 import RealmSwift
 import FirebaseDatabase
 import SwiftyUserDefaults
+import SystemConfiguration
 
 class KerbalManager {
     
@@ -29,8 +30,34 @@ class KerbalManager {
         return Array(campaigns)
     }
     
+    private func isInternetAvailable() -> Bool {
+        // https://stackoverflow.com/a/40148883
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
+                SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
+            }
+        }
+        
+        var flags = SCNetworkReachabilityFlags()
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            return false
+        }
+        let isReachable = flags.contains(.reachable)
+        let needsConnection = flags.contains(.connectionRequired)
+        return (isReachable && !needsConnection)
+    }
+    
     func loadCampaigns(completion : @escaping ((String?, [Campaign]?)-> Void)) {
         var cancelUpdate = true
+        
+        if !isInternetAvailable() {
+            self.cancelRequest(completion: completion)
+            return
+        }
         
         let reference = databaseRef.child("lastUpdate")
         reference.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -66,6 +93,11 @@ class KerbalManager {
     
     func syncCampaigns(lastUpdate : Int, completion : @escaping ((String?, [Campaign]?)-> Void)) {
         var cancelUpdate = true
+        
+        if !isInternetAvailable() {
+            self.cancelRequest(completion: completion)
+            return
+        }
         
         let reference = databaseRef.child("campaigns")
         reference.observeSingleEvent(of: .value, with: { (snapshot) in
