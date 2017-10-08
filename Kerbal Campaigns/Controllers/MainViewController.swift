@@ -17,6 +17,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+        
         LoadingView.show(inView: view)
 
         KerbalManager.shared.loadCampaigns { (errorMessage, campaigns) in

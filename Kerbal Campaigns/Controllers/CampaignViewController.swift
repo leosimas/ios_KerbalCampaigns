@@ -26,6 +26,9 @@ class CampaignViewController : UIViewController {
         textDifficulty.text = campaign.difficultyText
         textTime.text = campaign.length
         difficultyBarView.set(difficulty: campaign.difficultyNumber)
+        
+        self.navigationItem.title = campaign.name
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
