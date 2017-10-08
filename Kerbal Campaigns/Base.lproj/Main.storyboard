@@ -168,25 +168,36 @@
                                     <action selector="onMissionsButtonTap:" destination="RdK-x9-DaO" eventType="touchUpInside" id="BUN-o2-sr1"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4c-uC-oaT">
-                                <rect key="frame" x="20" y="156" width="335" height="495"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLk-3k-phM">
+                                <rect key="frame" x="0.0" y="156" width="375" height="511"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyA-lr-mpy">
+                                        <rect key="frame" x="16" y="0.0" width="343" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SyA-lr-mpy" firstAttribute="top" secondItem="rLk-3k-phM" secondAttribute="top" id="0eq-gP-oXp"/>
+                                    <constraint firstAttribute="bottom" secondItem="SyA-lr-mpy" secondAttribute="bottom" constant="16" id="Sdf-zE-6tJ"/>
+                                    <constraint firstItem="SyA-lr-mpy" firstAttribute="width" secondItem="rLk-3k-phM" secondAttribute="width" constant="-32" id="VIx-Mf-8Kv"/>
+                                    <constraint firstAttribute="trailing" secondItem="SyA-lr-mpy" secondAttribute="trailing" constant="16" id="jXB-LM-kV4"/>
+                                    <constraint firstItem="SyA-lr-mpy" firstAttribute="leading" secondItem="rLk-3k-phM" secondAttribute="leading" constant="16" id="smM-X1-Xj9"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="W9X-NA-zu4" firstAttribute="centerX" secondItem="TqB-Xw-Xcw" secondAttribute="centerX" id="0kw-Hh-NL8"/>
                             <constraint firstItem="8xx-fl-rtI" firstAttribute="leading" secondItem="TqB-Xw-Xcw" secondAttribute="leadingMargin" constant="16" id="5Zm-Uo-fe9"/>
+                            <constraint firstItem="rLk-3k-phM" firstAttribute="centerX" secondItem="TqB-Xw-Xcw" secondAttribute="centerX" id="7oz-8a-EPy"/>
+                            <constraint firstItem="sp5-ta-wd7" firstAttribute="top" secondItem="rLk-3k-phM" secondAttribute="bottom" id="8JU-xb-59T"/>
+                            <constraint firstItem="rLk-3k-phM" firstAttribute="top" secondItem="8xx-fl-rtI" secondAttribute="bottom" constant="16" id="9FK-Cn-5o1"/>
                             <constraint firstItem="W9X-NA-zu4" firstAttribute="width" secondItem="TqB-Xw-Xcw" secondAttribute="width" id="ClT-pD-UMW"/>
-                            <constraint firstItem="sp5-ta-wd7" firstAttribute="top" secondItem="M4c-uC-oaT" secondAttribute="bottom" constant="16" id="XUu-n5-a8w"/>
                             <constraint firstItem="8xx-fl-rtI" firstAttribute="top" secondItem="W9X-NA-zu4" secondAttribute="bottom" constant="16" id="YhX-dQ-Pkd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8xx-fl-rtI" secondAttribute="trailing" constant="16" id="ZnI-yA-M0Y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="M4c-uC-oaT" secondAttribute="trailing" constant="4" id="i7i-Wx-gCg"/>
-                            <constraint firstItem="M4c-uC-oaT" firstAttribute="leading" secondItem="TqB-Xw-Xcw" secondAttribute="leadingMargin" constant="4" id="kxA-uV-GXv"/>
-                            <constraint firstItem="M4c-uC-oaT" firstAttribute="top" secondItem="8xx-fl-rtI" secondAttribute="bottom" constant="16" id="q7T-AX-hZ2"/>
+                            <constraint firstItem="rLk-3k-phM" firstAttribute="width" secondItem="TqB-Xw-Xcw" secondAttribute="width" id="kp5-BP-MsN"/>
                             <constraint firstItem="W9X-NA-zu4" firstAttribute="top" secondItem="OFc-BL-BWl" secondAttribute="bottom" id="qMD-0M-h9t"/>
                         </constraints>
                     </view>
@@ -194,7 +205,7 @@
                         <outlet property="buttonMissions" destination="8xx-fl-rtI" id="PIz-aD-KOm"/>
                         <outlet property="difficultyBarView" destination="uXV-Db-4zs" id="PZq-8Q-g9F"/>
                         <outlet property="textDifficulty" destination="cef-4r-JWg" id="0Ha-Qv-9fA"/>
-                        <outlet property="textIntro" destination="M4c-uC-oaT" id="IOg-eD-knC"/>
+                        <outlet property="textIntro" destination="SyA-lr-mpy" id="K6f-xh-1Qs"/>
                         <outlet property="textProgress" destination="LUN-XF-cpy" id="vmh-O6-Z9p"/>
                         <outlet property="textTime" destination="dhX-Ha-w86" id="l4t-VE-Lsp"/>
                     </connections>

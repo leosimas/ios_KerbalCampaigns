@@ -13,7 +13,7 @@ class CampaignViewController : UIViewController {
     var campaign : Campaign!
     
     @IBOutlet weak var buttonMissions: UIButton!
-    @IBOutlet weak var textIntro: UITextView!
+    @IBOutlet weak var textIntro: UILabel!
     @IBOutlet weak var textDifficulty: UILabel!
     @IBOutlet weak var textProgress: UILabel!
     @IBOutlet weak var textTime: UILabel!
@@ -34,10 +34,6 @@ class CampaignViewController : UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateCampaignStatus()
-        if !viewInitialized {
-            textIntro.scrollRectToVisible(CGRect(origin: .zero, size: .zero), animated: false)
-            viewInitialized = true
-        }
     }
     
     private func updateCampaignStatus() {
