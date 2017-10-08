@@ -25,6 +25,8 @@ class LoadingView {
         view.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         view.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
         view.clipsToBounds = true
+        view.layer.cornerRadius = 5
+        view.layer.masksToBounds = true
         
         activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
         activityIndicator!.frame = CGRect(x: 0, y: 0, width: view.frame.width / 2, height: view.frame.height / 2)

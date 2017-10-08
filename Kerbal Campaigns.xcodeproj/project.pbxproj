@@ -159,10 +159,10 @@
 		50159A5F1F6A9733004D2AFE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A32143B51F819C8E00E4B40E /* Dialogs.swift */,
-				A32143B61F819C8E00E4B40E /* LoadingView.swift */,
 				50159A621F6AA20C004D2AFE /* CampaignCell.swift */,
 				A32143BF1F85AEE400E4B40E /* CheckboxView.swift */,
+				A32143B51F819C8E00E4B40E /* Dialogs.swift */,
+				A32143B61F819C8E00E4B40E /* LoadingView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
