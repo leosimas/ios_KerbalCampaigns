@@ -44,6 +44,12 @@ class TasksViewController: UIViewController {
                 self.updateCompletedObjectives()
             })
             
+            if index == 0 {
+                checkboxView.label.snp.updateConstraints({ (make) in
+                    make.top.equalToSuperview().offset(16)
+                })
+            }
+            
             methods.add(checkboxView)
                 .sidePadding(padding)
             

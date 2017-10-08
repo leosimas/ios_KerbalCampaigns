@@ -256,7 +256,7 @@
                                     <constraint firstItem="jpb-vm-fQw" firstAttribute="top" secondItem="lbS-Fi-oLq" secondAttribute="top" constant="16" id="zd6-EQ-JP6"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvw-o5-gzE">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvw-o5-gzE">
                                 <rect key="frame" x="0.0" y="97.5" width="375" height="569.5"/>
                             </scrollView>
                         </subviews>
