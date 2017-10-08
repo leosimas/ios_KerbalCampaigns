@@ -17,6 +17,11 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let navBar = self.navigationController!.navigationBar
+        navBar.barTintColor = Colors.primary
+        navBar.tintColor = UIColor.white
+        navBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.white ]
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         
         LoadingView.show(inView: view)

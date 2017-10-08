@@ -10,6 +10,8 @@ import UIKit
 
 struct Colors {
     
+    static let primary = Colors.hexStringToUIColor(hex: "283593")
+    
     static let level_1 = Colors.hexStringToUIColor(hex: "33ff00")
     static let level_2 = Colors.hexStringToUIColor(hex: "66ff00")
     static let level_3 = Colors.hexStringToUIColor(hex: "99ff00")
