@@ -18,16 +18,21 @@ class CampaignViewController : UIViewController {
     @IBOutlet weak var textProgress: UILabel!
     @IBOutlet weak var textTime: UILabel!
     
+    private var viewInitialized = false
+    
     override func viewDidLoad() {
         textIntro.text = campaign.introduction
-        textIntro.scrollRectToVisible(CGRect(origin: .zero, size: .zero), animated: false)
-        textDifficulty.text = campaign.difficulty
+        textDifficulty.text = campaign.difficultyText
         textTime.text = campaign.length
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateCampaignStatus()
+        if !viewInitialized {
+            textIntro.scrollRectToVisible(CGRect(origin: .zero, size: .zero), animated: false)
+            viewInitialized = true
+        }
     }
     
     private func updateCampaignStatus() {

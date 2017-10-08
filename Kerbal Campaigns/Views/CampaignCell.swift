@@ -17,7 +17,7 @@ class CampaignCell: UITableViewCell {
     func setup(campaign : Campaign) {
         labelTitle.text = campaign.name
         labelTime.text = campaign.length
-        labelLevel.text = campaign.difficulty
+        labelLevel.text = campaign.difficultyText
     }
 
 }

@@ -16,6 +16,8 @@ class Campaign : Object {
     dynamic var difficulty = ""
     dynamic var introduction = ""
     dynamic var length = ""
+    dynamic var difficultyNumber = 1
+    dynamic var difficultyText = ""
     let missions = List<Mission>()
     
     override static func primaryKey() -> String? {

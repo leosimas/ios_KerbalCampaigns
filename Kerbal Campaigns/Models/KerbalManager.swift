@@ -113,6 +113,17 @@ class KerbalManager {
         campaign.introduction = jsonCampaign[Constants.ResponseKeys.INTRO] as! String
         campaign.length = jsonCampaign[Constants.ResponseKeys.LENGTH] as! String
         campaign.name = jsonCampaign[Constants.ResponseKeys.NAME] as! String
+        // extract difficulty text and number:
+        // pattern : N/10 (TEXT)
+        let str = campaign.difficulty
+        
+        var indexFirst = str.range(of: "(")!.upperBound
+        let indexLast = str.range(of: ")")!.lowerBound
+        campaign.difficultyText = str.substring(with: Range(uncheckedBounds: (lower: indexFirst, upper: indexLast)))
+        
+        indexFirst = str.range(of: "/")!.lowerBound
+        let value = str.substring(to: indexFirst).trimmingCharacters(in: .whitespacesAndNewlines)
+        campaign.difficultyNumber = Int(value)!
         
         let missionsArray = jsonCampaign[Constants.ResponseKeys.MISSIONS] as! NSArray
         campaign.missions.append(objectsIn: createMissions(missionsArray))
