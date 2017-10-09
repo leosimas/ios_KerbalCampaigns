@@ -15,7 +15,7 @@ class MissionsViewController : UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = campaign.name
+        navigationItem.title = campaign.name
         
         var tabs : [UIViewController] = []
         for (index, mission) in campaign.missions.enumerated() {

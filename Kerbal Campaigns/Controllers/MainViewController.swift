@@ -22,10 +22,19 @@ class MainViewController: UIViewController {
         navBar.tintColor = UIColor.white
         navBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.white ]
         
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         
+        refreshCampaigns()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+    private func refreshCampaigns() {
         LoadingView.show(inView: view)
-
+        
         KerbalManager.shared.loadCampaigns { (errorMessage, campaigns) in
             LoadingView.hide()
             
@@ -39,9 +48,8 @@ class MainViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
+    @IBAction func onRefreshTap() {
+        refreshCampaigns()
     }
     
     fileprivate func show( campaign : Campaign ) {

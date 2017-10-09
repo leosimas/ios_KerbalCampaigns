@@ -22,12 +22,14 @@ class CampaignViewController : UIViewController {
     private var viewInitialized = false
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         textIntro.text = campaign.introduction
         textDifficulty.text = campaign.difficultyText
         textTime.text = campaign.length
         
-        self.navigationItem.title = campaign.name
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+        navigationItem.title = campaign.name
+        navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

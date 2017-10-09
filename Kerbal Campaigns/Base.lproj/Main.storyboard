@@ -97,7 +97,13 @@
                             <constraint firstItem="jkw-PL-uWd" firstAttribute="centerX" secondItem="GOn-XE-sZ4" secondAttribute="centerX" id="nk5-n6-C12"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kerbal Campaigns" id="9JN-Qg-Srn"/>
+                    <navigationItem key="navigationItem" title="Kerbal Campaigns" id="9JN-Qg-Srn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="2TE-fI-o7j">
+                            <connections>
+                                <action selector="onRefreshTap" destination="7QJ-Nd-LOm" id="wNL-MZ-bVp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="jkw-PL-uWd" id="BnI-Pt-JHT"/>
                     </connections>

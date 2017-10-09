@@ -33,8 +33,6 @@ class TasksViewController: UIViewController {
         let paddingVertical = padding / 2
         let paddingStart = padding * 3
         
-        
-        
         for (index, task) in mission.tasks.enumerated() {
             let checkboxView = CheckboxView()
             checkboxView.bind(on: task.completed, text: task.name, handler: { (on) in
