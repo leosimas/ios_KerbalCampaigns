@@ -22,6 +22,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOf-Vh-FRu">
+                                <rect key="frame" x="150" y="312.5" width="74" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="onRefreshTap" destination="7QJ-Nd-LOm" eventType="touchUpInside" id="ncT-uK-PwH"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="jkw-PL-uWd">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -91,20 +99,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dOf-Vh-FRu" firstAttribute="centerY" secondItem="GOn-XE-sZ4" secondAttribute="centerY" id="NqT-Gk-V3u"/>
                             <constraint firstItem="H44-RP-FPl" firstAttribute="top" secondItem="jkw-PL-uWd" secondAttribute="bottom" id="Qfq-76-EIC"/>
+                            <constraint firstItem="dOf-Vh-FRu" firstAttribute="centerX" secondItem="GOn-XE-sZ4" secondAttribute="centerX" id="Z9Z-EJ-j1p"/>
                             <constraint firstItem="jkw-PL-uWd" firstAttribute="top" secondItem="mfe-tX-yDz" secondAttribute="bottom" id="cbM-BU-eXs"/>
                             <constraint firstItem="jkw-PL-uWd" firstAttribute="width" secondItem="GOn-XE-sZ4" secondAttribute="width" id="frH-vp-yeZ"/>
                             <constraint firstItem="jkw-PL-uWd" firstAttribute="centerX" secondItem="GOn-XE-sZ4" secondAttribute="centerX" id="nk5-n6-C12"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kerbal Campaigns" id="9JN-Qg-Srn">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="2TE-fI-o7j">
-                            <connections>
-                                <action selector="onRefreshTap" destination="7QJ-Nd-LOm" id="wNL-MZ-bVp"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Kerbal Campaigns" id="9JN-Qg-Srn"/>
                     <connections>
+                        <outlet property="reloadButton" destination="dOf-Vh-FRu" id="Jqo-91-rpe"/>
                         <outlet property="tableView" destination="jkw-PL-uWd" id="BnI-Pt-JHT"/>
                     </connections>
                 </viewController>

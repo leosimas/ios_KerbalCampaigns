@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var reloadButton: UIButton!
     
     fileprivate var campaigns : [Campaign] = []
     
@@ -37,6 +38,11 @@ class MainViewController: UIViewController {
         
         KerbalManager.shared.loadCampaigns { (errorMessage, campaigns) in
             LoadingView.hide()
+            
+            DispatchQueue.main.async {
+                self.reloadButton.isHidden = campaigns != nil
+                self.tableView.isHidden = campaigns == nil
+            }
             
             guard let list = campaigns else {
                 Dialogs.alert(controller: self, title: "Error", message: errorMessage!)
