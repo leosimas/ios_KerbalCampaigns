@@ -13,13 +13,13 @@ class CampaignCell: UITableViewCell {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var labelLevel: UILabel!
-    @IBOutlet weak var difficultyBarView: DifficultyBarView!
+    @IBOutlet weak var progressBarView: ProgressBarView!
     
     func setup(campaign : Campaign) {
         labelTitle.text = campaign.name
         labelTime.text = campaign.length
         labelLevel.text = campaign.difficultyText
-        difficultyBarView.set(difficulty: campaign.difficultyNumber)
+        progressBarView.set(progress: campaign.currentProgress())
     }
 
 }

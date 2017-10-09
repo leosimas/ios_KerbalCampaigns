@@ -19,9 +19,4 @@ struct Constants {
         static let SUBTASKS = "subtasks"
     }
     
-    struct Campaign {
-        static let MAX_DIFFICULTY = 10
-    }
-    
-    
 }

@@ -17,7 +17,7 @@ class CampaignViewController : UIViewController {
     @IBOutlet weak var textDifficulty: UILabel!
     @IBOutlet weak var textProgress: UILabel!
     @IBOutlet weak var textTime: UILabel!
-    @IBOutlet weak var difficultyBarView: DifficultyBarView!
+    @IBOutlet weak var progressBarView: ProgressBarView!
     
     private var viewInitialized = false
     
@@ -25,7 +25,6 @@ class CampaignViewController : UIViewController {
         textIntro.text = campaign.introduction
         textDifficulty.text = campaign.difficultyText
         textTime.text = campaign.length
-        difficultyBarView.set(difficulty: campaign.difficultyNumber)
         
         self.navigationItem.title = campaign.name
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
@@ -49,6 +48,7 @@ class CampaignViewController : UIViewController {
         
         let progress = Int(Float(completed) / Float(total) * 100)
         textProgress.text = "\(progress)% completed"
+        progressBarView.set(progress: progress)
     }
     
     @IBAction func onMissionsButtonTap(_ sender: Any) {

@@ -12,12 +12,7 @@ struct Colors {
     
     static let primary = Colors.hexStringToUIColor(hex: "283593")
     static let secondary = Colors.hexStringToUIColor(hex: "3f51b5")
-    
-    
-    static let level_1 = Colors.hexStringToUIColor(hex: "33ff00")
-    static let level_2 = Colors.hexStringToUIColor(hex: "66ff00")
-    static let level_3 = Colors.hexStringToUIColor(hex: "99ff00")
-    // TODO add other colors
+    static let progressBar = Colors.hexStringToUIColor(hex: "33ff00")
     
     static func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()

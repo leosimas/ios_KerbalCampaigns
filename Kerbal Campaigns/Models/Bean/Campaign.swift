@@ -24,4 +24,15 @@ class Campaign : Object {
         return "id"
     }
     
+    func currentProgress() -> Int {
+        var completed = 0
+        for mission in missions {
+            if (mission.completed) {
+                completed += 1
+            }
+        }
+        
+        return Int(Float(completed) / Float(missions.count) * 100)
+    }
+    
 }

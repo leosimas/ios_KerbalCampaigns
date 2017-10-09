@@ -39,6 +39,11 @@ class MainViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     fileprivate func show( campaign : Campaign ) {
         let campaignVC = storyboard?.instantiateViewController(withIdentifier: "CampaignViewController") as! CampaignViewController
         campaignVC.campaign = campaign
